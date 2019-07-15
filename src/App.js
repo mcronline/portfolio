@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.scss'
 
-import data from "./data.json"
+import data from "./data.js"
 
 import Intro from './components/Intro'
 import Portfolio from './components/Portfolio'
@@ -18,7 +18,7 @@ class App extends React.Component  {
     return (
       <div>
         <Intro data={data.resume} />
-        <Portfolio data={data.potfolio} />
+        <Portfolio data={data.portfolio} />
         <Timeline />
         <Contact />
       </div>

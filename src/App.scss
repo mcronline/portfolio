@@ -1,5 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Actor&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bahianita|Montserrat|Quicksand|Raleway|Squada+One&display=swap');
 
 $font-factor:1vw;
 
@@ -13,7 +15,7 @@ body{
   color:#ffd783;
   font-size:calc(7px + 1vw);
   list-style-type: none;
-  font-family: Actor, Helvetica, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   background-image: linear-gradient(-180deg,#213F66,#19355a)
 }
 
@@ -21,12 +23,11 @@ h1{
   font-size:2.5em;
   margin:0;
   color:#fff284;
-  font-family: Actor, Helvetica, sans-serif;
   font-weight: inherit;
 }
 
 h2{
-  font-size: 0.9em;
+  font-size: 1.1em;
   margin:0;
 }
 
@@ -47,6 +48,14 @@ h2{
   flex-direction:column;
   justify-content: space-around;
   align-items: center;
+}
+
+#intro-section h1{
+  //font-family: 'Quicksand', sans-serif;
+  //font-family: 'Raleway', sans-serif;
+  //font-family: 'Montserrat', sans-serif;
+  font-family: 'Squada One', sans-serif;
+  font-size: 3em;
 }
 
 #intro-section nav{
@@ -93,6 +102,7 @@ h2{
   display: block;
   height:80%;
   max-width: 500px;
+  box-shadow: 0px 0px 40px rgba(255,255,255,0.3);
 }
 
 #resume{
@@ -114,6 +124,38 @@ h2{
   text-align:center;
 }
 
+#portfolio-items{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  font-size: 0.8em;
+  text-align: left;
+  padding: 0px 20px;
+}
+
+.portfolio-item{
+  display: flex;
+  padding:15px;
+}
+
+.portfolio-item-data{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  background-color: rgba(0,0,0,0.2);
+  margin-left:10px;
+  padding: 10px;
+}
+
+.portfolio-item-title{
+  font-size: 1.4em;
+}
+
+.portfolio-item-skills{
+  font-size: 0.9em;
+}
+
+
 @media (max-width:550px){ 
 
   #intro-section nav{
@@ -134,3 +176,4 @@ h2{
     align-items: center;
   }
 }
+
