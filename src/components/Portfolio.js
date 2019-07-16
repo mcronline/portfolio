@@ -1,4 +1,5 @@
 import React from 'react'
+import { Modal, Header } from "semantic-ui-react"
 
 const images = {};
 
@@ -7,7 +8,9 @@ function Portfolio (props){
     const portfolioItems = props.data.map((v) => {
         return (
             <div key={v.key} className="portfolio-item">
-                <img src={v.img} className="portfolio-image" />
+                <Modal trigger={<img src={v.thumb} className="portfolio-image" />} >
+                    <Header content={v.title} subheader={v.description}></Header>
+                </Modal>
                 <div className="portfolio-item-data">
                     <div className="portfolio-item-title">{v.title}</div>
                     <div className="portfolio-item-skills">{v.skills}</div>
