@@ -45,6 +45,9 @@ h2{
   min-height: 100vh;
 }
 
+
+// INTRO
+
 #intro-section{
   width:100vw;
   height:100vh;
@@ -120,6 +123,9 @@ h2{
   min-height:150px;
 }
 
+
+// PORTIFOLIO
+
 #portfolio-section{
   
   padding-top:30px;
@@ -152,7 +158,7 @@ h2{
   flex-direction:column;
   justify-content: space-between;
   width: 100%;
-  padding:5px;
+  padding:10px;
 }
 
 .portfolio-item-data *{
