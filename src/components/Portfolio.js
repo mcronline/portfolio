@@ -9,7 +9,10 @@ function Portfolio (props){
         return (
             <div key={v.key} className="portfolio-item">
                 <Modal trigger={<img src={v.thumb} className="portfolio-image" />} >
-                    <Header content={v.title} subheader={v.description}></Header>
+                    <Header content={v.title} subheader={v.description + ". Skills: " + v.skills}></Header>
+                    <Modal.Content>
+                        Just testing
+                    </Modal.Content>
                 </Modal>
                 <div className="portfolio-item-data">
                     <div className="portfolio-item-title">{v.title}</div>
