@@ -65,6 +65,17 @@ export default {
             "imgs" : [
                 
             ]
+        },
+        {
+            "key":6,
+            "title" : "Certifications",
+            "skills" : "Computer Engineering, Information Security, Front and Backend Web Development",
+            "description" : "My tecnology certifications",
+            "thumb" : require("./images/certs_portfolio.jpg"),
+            "link" : "",
+            "imgs" : [
+                
+            ]
         }
     ]
 }
