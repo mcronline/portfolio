@@ -12,7 +12,7 @@
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-img-carousel": "^1.4.2",
+    "react-responsive-carousel": "^3.1.49",
     "react-scripts": "3.0.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-less": "^2.4.1",

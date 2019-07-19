@@ -5,14 +5,6 @@ import {faLinkedin,faTwitterSquare,faGithubSquare} from '@fortawesome/free-brand
 
 class Intro extends React.Component {
 
-    constructor(props){
-        super(props)
-    }
-
-    componentDidMount(){
-
-    }
-
     render(){
 
         const resumeTags = this.props.data.map(line => <li>{line}</li>)

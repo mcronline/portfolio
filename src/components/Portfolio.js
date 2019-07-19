@@ -1,25 +1,31 @@
 import React from 'react'
 import { Modal, Header } from "semantic-ui-react"
 
-const images = {};
 
 function Portfolio (props){
 
     const portfolioItems = props.data.map((v) => {
+
+        const item = <div className="portfolio-item">
+                        <img alt={v.title + " thumb image"} src={v.thumb} className="portfolio-thumb" />
+                        <div className="portfolio-item-data">
+                            <div className="portfolio-item-title">{v.title}</div>
+                            <div className="portfolio-item-skills">{v.skills}</div>
+                            <div className="portfolio-item-description">{v.description}</div>
+                        </div>
+                    </div>
+        
+        const imgs = v.imgs.map(value => <img className="portfolio-image" src={value} alt={v.title + " image"} />)
+        
         return (
-            <div key={v.key} className="portfolio-item">
-                <Modal trigger={<img src={v.thumb} className="portfolio-image" />} >
-                    <Header content={v.title} subheader={v.description + ". Skills: " + v.skills}></Header>
-                    <Modal.Content>
-                        Just testing
-                    </Modal.Content>
-                </Modal>
-                <div className="portfolio-item-data">
-                    <div className="portfolio-item-title">{v.title}</div>
-                    <div className="portfolio-item-skills">{v.skills}</div>
-                    <div className="portfolio-item-description">{v.description}</div>
-                </div>
-            </div>
+            <Modal key={v.key} trigger={item} closeIcon >
+                \<Header content={v.title} subheader={v.description + ". Skills: " + v.skills}></Header>
+                <Modal.Content scrolling>
+                    <div className="portfolio-images">
+                        {imgs}                        
+                    </div>
+                </Modal.Content>
+            </Modal>
         )
     })
 

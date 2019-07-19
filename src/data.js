@@ -1,3 +1,11 @@
+const imgsList = (prefix,n) => {
+    let arr = [];
+    for(let i = 1; i <= n; i++)
+        arr.push(require(`./images/${prefix}_${i}.jpg`))
+
+    return arr;
+}
+
 export default {
     "resume" : [
         "Computer Engineering and Information Security degree",
@@ -16,9 +24,7 @@ export default {
             "description" : "Personal project focused on real state agencies and realtors needs, delivering real state management and CRM.",
             "thumb" : require("./images/imoveis_expert_portfolio.jpg"),
             "link" : "www.imoveis.expert",
-            "imgs" : [
-
-            ]
+            "imgs" : imgsList('port_imoveis_expert',9)
         },
         
         {
@@ -28,9 +34,7 @@ export default {
             "description" : "Personal project focused on address search in Brazil. Payment service integration (PagSeguro)",
             "thumb" : require("./images/qualocep_portfolio.jpg"),
             "link" : "www.qualocep.com",
-            "imgs" : [
-                
-            ]
+            "imgs" : imgsList('port_qualocep',3)
         },
         {
             "key":2,
@@ -39,9 +43,7 @@ export default {
             "description" : "Website for a dentistry clinic in Brazil.",
             "thumb" : require("./images/ortoriso_portfolio.jpg"),
             "link" : "www.ortorisolitoral.com.br",
-            "imgs" : [
-                
-            ]
+            "imgs" : imgsList('port_ortoriso',6)
         },
         {
             "key":3,
@@ -50,9 +52,7 @@ export default {
             "description" : "Website for a construction company in Brazil.",
             "thumb" : require("./images/crconstrucao_portfolio.jpg"),
             "link" : "www.crconstrucao.com",
-            "imgs" : [
-                
-            ]
+            "imgs" : imgsList('port_crconstrucao',7)
             
         },
         {
@@ -62,9 +62,7 @@ export default {
             "description" : "Projects for programming skills development and certification",
             "thumb" : require("./images/codepen_portfolio.jpg"),
             "link" : "codepen.io/mcronline/",
-            "imgs" : [
-                
-            ]
+            "imgs" : imgsList('port_codepen',5)
         },
         {
             "key":6,
@@ -73,9 +71,7 @@ export default {
             "description" : "My tecnology certifications",
             "thumb" : require("./images/certs_portfolio.jpg"),
             "link" : "",
-            "imgs" : [
-                
-            ]
+            "imgs" : imgsList('port_cert',5)
         }
     ]
 }
