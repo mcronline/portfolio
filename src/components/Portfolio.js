@@ -24,7 +24,7 @@ function Portfolio (props){
                 <Header content={v.title} subheader={v.description + ". Skills: " + v.skills}></Header>
                 <Modal.Content scrolling>
                     <div className="portfolio-images">
-                        {imgs}                        
+                        {imgs}
                     </div>
                 </Modal.Content>
             </Modal>

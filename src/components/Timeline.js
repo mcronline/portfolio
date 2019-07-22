@@ -1,8 +1,34 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBaby,faHeart,faTerminal} from '@fortawesome/free-solid-svg-icons'
+import {faBaby} from '@fortawesome/free-solid-svg-icons'
 
 function Timeline (props){
+    
+    const timeline = props.data.map((v,i) => {
+
+        const sideClass = (i % 2 === 0 ? "left" : "right")
+        let spacing = ""
+        if(v.padding)
+            spacing = {paddingTop:v.padding}
+        else
+            spacing = {paddingTop:"0px"}
+
+        return(
+            <div key={v.key} className={sideClass} style={spacing}>
+                <div className="content">
+                    <div className="icon-year">
+                        <div className="year">{v.year}</div>
+                        {v.icon}
+                    </div>
+                    <div className="description">
+                        <div className="description-line-1">{v.description1}</div>
+                        <div className="description-line-2">{v.description2}</div>
+                    </div>
+                </div>
+            </div>
+        )
+    })
+
     return(
         <section id="timeline-section">
             <h1>Timeline</h1>
@@ -11,24 +37,7 @@ function Timeline (props){
                 <div className="year">1978</div>
             </div>
             <div id="timeline">
-                <div className="left">
-                    <div className="content">
-                        <div className="icon-year">
-                            <div className="year">1986</div>
-                            <FontAwesomeIcon icon={faTerminal} size="2x" className="icon" />
-                        </div>
-                        <div className="description"><span>Met a MSX computer system of a friend. <br />First contact with code.</span></div>
-                    </div>
-                </div>                
-                <div className="right">
-                    <div className="content">
-                            <div className="icon-year">
-                            <FontAwesomeIcon icon={faHeart} size="2x" className="icon" />
-                            <div className="year">1981</div>
-                        </div>
-                        <div className="description"><span>Won my atari 2600. <br />Start the passion for games.</span></div>
-                    </div>
-                </div>
+                {timeline}
             </div>
         </section>
     )

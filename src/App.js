@@ -24,7 +24,7 @@ class App extends React.Component  {
         <div id="scroller">
           <Intro data={data.resume} />
           <Portfolio data={data.portfolio} />
-          <Timeline />
+          <Timeline data={data.timeline} />
           <Contact />
         </div>
       </div>

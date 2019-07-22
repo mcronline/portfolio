@@ -1,3 +1,7 @@
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faHeart,faTerminal, faChalkboardTeacher, faUserGraduate} from '@fortawesome/free-solid-svg-icons'
+
 const imgsList = (prefix,n) => {
     let arr = [];
     for(let i = 1; i <= n; i++)
@@ -16,6 +20,7 @@ export default {
         "UI : { HTML ; SCSS }",
         "Wordpress Developer Expert"        
     ],
+    
     "portfolio" : [
         {
             "key":1,
@@ -72,6 +77,57 @@ export default {
             "thumb" : require("./images/certs_portfolio.jpg"),
             "link" : "",
             "imgs" : imgsList('port_cert',5)
+        }
+    ],
+
+    "timeline":[
+        {
+            "key":1,
+            "icon":<FontAwesomeIcon icon={faTerminal} size="2x" className="icon" />,
+            "year":"1988",
+            "description1":"Met a MSX computer system of a friend.",
+            "description2":"First contact with code.",
+            "padding":""
+        },
+        {
+            "key":2,
+            "icon":<FontAwesomeIcon icon={faHeart} size="2x" className="icon" />,
+            "year":"1984",
+            "description1":"Won my atari 2600.",
+            "description2":"Start the passion for games.",
+            "padding":""
+        },        
+        {
+            "key":3,
+            "icon":<FontAwesomeIcon icon={faChalkboardTeacher} size="2x" className="icon" />,
+            "year":"1998",
+            "description1":"Visual Basic Teacher",
+            "description2":"",
+            "padding":""
+        },        
+        {
+            "key":4,
+            "icon":<FontAwesomeIcon icon={faUserGraduate} size="2x" className="icon" />,
+            "year":"1997",
+            "description1":"Data Processing Technician Degree",
+            "description2":"Basic, Pascal, Dbase, Visual Basic, etc",
+            "padding":""
+        },        
+        {
+            "key":5,
+            "icon":<FontAwesomeIcon icon={faChalkboardTeacher} size="2x" className="icon" />,
+            "year":"2005",
+            "description1":"Web Designer Fulltime Job",
+            "description2":"Mostly working with HTML, javascript, ASP and ActionScript. Creating websites for real estate agencies and photographers",
+            "padding":"360px"
+        },        
+        {
+            "key":6,
+            "icon":<FontAwesomeIcon icon={faUserGraduate} size="2x" className="icon" />,
+            "year":"2003",
+            "description1":"Computer Engineering Degree",
+            "description2":"Deep Concepts of UML, OOP, Digital Systems, Networking, etc. Intership in a big sanitation company in Brazil (SABESP)",
+            "padding":""
         }
     ]
 }

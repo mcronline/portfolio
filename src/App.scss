@@ -59,7 +59,6 @@ h2{
   width: 120vw;
   height: 100vh;
   opacity: 0.3;
-  border:1px solid red;
 }
 
 #bg-brilho-tela{
@@ -81,12 +80,11 @@ h2{
 }
 
 #intro-section h1{
-  //font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   //font-family: 'Raleway', sans-serif;
-  //font-family: 'Montserrat', sans-serif;
-  font-family: 'share Tech', sans-serif;
+  //font-family: 'share Tech', sans-serif;
   //font-family: 'Squada One', sans-serif;
-  font-size: 3em;
+  //font-size: 3em;
 }
 
 #intro-section nav{
@@ -103,7 +101,7 @@ h2{
 #intro-section header{
   display: flex;
   justify-content: center;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.4);
   width:100vw;
 }
 
@@ -229,8 +227,9 @@ h2{
 // TIMELINE
 
 $iconColor:white;
+$iconPadding:5px;
 $timeline-padding:10px;
-$block-height:300px;
+$block-height:250px;
 
 #timeline-section{  
   padding-top:30px;
@@ -269,19 +268,22 @@ $block-height:300px;
 
     display:flex;
     justify-content: flex-start;
-    border-left:1px solid white;
     height: $block-height;
+    max-width: 400px;
 
     .content{
 
       .icon-year{
 
         display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
         align-items:center;
         padding:$timeline-padding;
       
         .icon{
           color:$iconColor;
+          padding:$iconPadding;
         }
 
         .year{
@@ -308,6 +310,8 @@ $block-height:300px;
     justify-content: flex-end;
     align-items: flex-end;
     height:$block-height;
+    border-right:1px solid white;
+    max-width: 450px;
 
     .content{
 
@@ -320,6 +324,7 @@ $block-height:300px;
       
         .icon{
           color:$iconColor;
+          padding:$iconPadding;
         }
 
         .year{
@@ -341,8 +346,20 @@ $block-height:300px;
 
 }
 
+.description-line-1{
+  color:#fff284;
+}
+
+.description-line-2{
+  font-size: 0.8em;
+  padding-top:5px;
+}
 
 @media (max-width:550px){ 
+
+  #bg{
+    width: 250vw;
+  }
 
   #intro-section nav{
     font-size:1.4em;
@@ -368,9 +385,11 @@ $block-height:300px;
     margin:0;
   } 
 
-  #bg{
-    width: 200vw;
+  #timeline, #timeline-top{
+    font-size:1.4em;
   }
+
+
 
   /*.portfolio-item-title{
     font-size: 1.4em;
@@ -386,7 +405,8 @@ $block-height:300px;
 
 }
 
-@media (max-width:1200px){ 
+@media (min-width:550px) and (max-width:1200px){ 
+
   .portfolio-image{
     max-height:320px;
   }
