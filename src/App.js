@@ -9,6 +9,7 @@ import Intro from './components/Intro'
 import Portfolio from './components/Portfolio'
 import Timeline from './components/Timeline'
 import Contact from './components/Contact'
+import { ReactComponent as Background } from './images/bg.svg'
 
 class App extends React.Component  {
 
@@ -18,7 +19,8 @@ class App extends React.Component  {
 
   render(){
     return (
-      <div>
+      <div id="main">
+        <Background />
         <Intro data={data.resume} />
         <Portfolio data={data.portfolio} />
         <Timeline />

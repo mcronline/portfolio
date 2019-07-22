@@ -7,7 +7,7 @@ class Intro extends React.Component {
 
     render(){
 
-        const resumeTags = this.props.data.map(line => <li>{line}</li>)
+        const resumeTags = this.props.data.map(line => <li data-anime="left">{line}</li>)
 
         return(
             <section id="intro-section">
@@ -17,14 +17,16 @@ class Intro extends React.Component {
                     <li>Timeline</li>
                     <li>Contact</li>
                 </nav>
-                <header id="title">
-                    <h1>Michel Curti Rozatti Soller</h1>
-                    <div id="sub-title">
-                        <h2>Full Stack Web Developer</h2>
-                        <div id="social-icons">
-                            <FontAwesomeIcon icon={faLinkedin} size="2x" className="icons" />
-                            <FontAwesomeIcon icon={faTwitterSquare} size="2x" className="icons" />
-                            <FontAwesomeIcon icon={faGithubSquare} size="2x" className="icons" />
+                <header>
+                    <div id="title">
+                        <h1>Michel Curti Rozatti Soller</h1>
+                        <div id="sub-title">
+                            <h2>Full Stack Web Developer</h2>
+                            <div id="social-icons">
+                                <FontAwesomeIcon icon={faLinkedin} size="2x" className="icons" />
+                                <FontAwesomeIcon icon={faTwitterSquare} size="2x" className="icons" />
+                                <FontAwesomeIcon icon={faGithubSquare} size="2x" className="icons" />
+                            </div>
                         </div>
                     </div>
                 </header>

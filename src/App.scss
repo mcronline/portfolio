@@ -17,7 +17,8 @@ body{
   font-size:calc(7px + 1vw);
   list-style-type: none;
   font-family: 'Ubuntu', sans-serif;
-  background-image: linear-gradient(-180deg,#213F66,#19355a);
+  background-color: #213F66;
+  //background-image: linear-gradient(-180deg,#213F66,#19355a);
   line-height:24px;
 }
 
@@ -46,6 +47,26 @@ h2{
   min-height: 100vh;
 }
 
+#main{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+#bg{
+  position:fixed;
+  z-index: -1;
+  width: 120vw;
+  height: 100vh;
+  opacity: 0.3;
+  border:1px solid red;
+}
+
+#bg-brilho-tela{
+  animation-name: brilho-tela;
+  animation-duration: 300ms;
+  animation-iteration-count: infinite;
+}
 
 // INTRO
 
@@ -76,14 +97,23 @@ h2{
   align-items: center;
   margin-top: 15px;
   font-size:0.7em;
+  margin-bottom: 20px;
+}
+
+#intro-section header{
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.2);
+  width:100vw;
 }
 
 #title{
   display:flex;
   flex-direction: column;
-  justify-content: center;;  
+  justify-content: center;
   align-items: space-between;
   margin:20px 10px 20px 10px;
+  width: fit-content;
 }
 
 
@@ -221,6 +251,10 @@ h2{
     margin:0;
   } 
 
+  #bg{
+    width: 200vw;
+  }
+
   /*.portfolio-item-title{
     font-size: 1.4em;
   }
@@ -238,5 +272,39 @@ h2{
 @media (max-width:1200px){ 
   .portfolio-image{
     max-height:320px;
+  }
+}
+
+
+//ANINATION
+
+/*[data-anime]{
+  opacity:0;
+}
+
+[data-anime="left"]{
+  transform: translate3d(-50px,0,0);
+}
+
+[data-anime="top"]{
+  transform: translate3d(0,50px,0);
+}
+
+[data-anime="normal"]{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}*/
+
+
+
+@keyframes brilho-tela{
+  0%{
+    opacity:0;
+  }
+  50%{
+    opacity:0.1;
+  }
+  100%{
+    opacity:0;
   }
 }
