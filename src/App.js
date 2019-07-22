@@ -21,10 +21,12 @@ class App extends React.Component  {
     return (
       <div id="main">
         <Background />
-        <Intro data={data.resume} />
-        <Portfolio data={data.portfolio} />
-        <Timeline />
-        <Contact />
+        <div id="scroller">
+          <Intro data={data.resume} />
+          <Portfolio data={data.portfolio} />
+          <Timeline />
+          <Contact />
+        </div>
       </div>
     );
     }

@@ -155,10 +155,9 @@ h2{
 }
 
 
-// PORTIFOLIO
+// PORTFOLIO
 
 #portfolio-section{
-  
   padding-top:30px;
   display:flex;
   flex-direction:column;
@@ -173,6 +172,7 @@ h2{
   text-align: left;
   font-size: 0.9em;
   margin-top:10px;
+  width: fit-content;
 }
 
 .portfolio-item{
@@ -225,6 +225,123 @@ h2{
   text-align: center;
 }
 
+
+// TIMELINE
+
+$iconColor:white;
+$timeline-padding:10px;
+$block-height:300px;
+
+#timeline-section{  
+  padding-top:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+#timeline-top{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:30px;
+  margin-bottom:30px;
+
+  .icon{
+    color:$iconColor;
+    margin-bottom:10px;
+  }
+
+  .year{
+    color:$iconColor;
+  }
+
+}
+
+#timeline{
+
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+
+  .right{
+
+    display:flex;
+    justify-content: flex-start;
+    border-left:1px solid white;
+    height: $block-height;
+
+    .content{
+
+      .icon-year{
+
+        display: flex;
+        align-items:center;
+        padding:$timeline-padding;
+      
+        .icon{
+          color:$iconColor;
+        }
+
+        .year{
+          color:$iconColor;
+          padding-left:10px;
+        }
+
+      }
+
+      .description{
+        border-top:1px solid white;
+        padding:$timeline-padding;
+        text-align: left;
+      }
+
+    }
+
+  }
+
+
+  .left{
+
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height:$block-height;
+
+    .content{
+
+      .icon-year{
+
+        display: flex;
+        justify-content: flex-end;
+        align-items:center;
+        padding:$timeline-padding;
+      
+        .icon{
+          color:$iconColor;
+        }
+
+        .year{
+          color:$iconColor;
+          padding-right:10px;
+        }
+
+      }
+
+      .description{
+        border-top:1px solid white;
+        padding:$timeline-padding;
+        text-align: right;
+      }
+
+    }
+
+  }
+
+}
+
+
 @media (max-width:550px){ 
 
   #intro-section nav{
@@ -272,6 +389,10 @@ h2{
 @media (max-width:1200px){ 
   .portfolio-image{
     max-height:320px;
+  }
+
+  #bg{
+    width: 150vw;
   }
 }
 

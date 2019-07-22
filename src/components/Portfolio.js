@@ -1,4 +1,6 @@
 import React from 'react'
+
+import 'semantic-ui-css/semantic.min.css'
 import { Modal, Header } from "semantic-ui-react"
 
 
@@ -19,7 +21,7 @@ function Portfolio (props){
         
         return (
             <Modal key={v.key} trigger={item} closeIcon >
-                \<Header content={v.title} subheader={v.description + ". Skills: " + v.skills}></Header>
+                <Header content={v.title} subheader={v.description + ". Skills: " + v.skills}></Header>
                 <Modal.Content scrolling>
                     <div className="portfolio-images">
                         {imgs}                        
