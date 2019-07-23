@@ -8,7 +8,7 @@ function Portfolio (props){
 
     const portfolioItems = props.data.map((v) => {
 
-        const item = <div className="portfolio-item">
+        const item = <div className="portfolio-item" data-anime="move-top">
                         <img alt={v.title + " thumb image"} src={v.thumb} className="portfolio-thumb" />
                         <div className="portfolio-item-data">
                             <div className="portfolio-item-title">{v.title}</div>
@@ -33,7 +33,7 @@ function Portfolio (props){
 
     return(
         <section id="portfolio-section">
-            <h1>Portfolio</h1>
+            <h1 data-anime="move-right">Portfolio</h1>
             <div id="portfolio-items">
                 {portfolioItems}
             </div>

@@ -444,22 +444,22 @@ $block-height:300px;
   width:0px;
 }
 
-.anim-move-left, .anim-move-right, .anim-move-top, .anim-move-bottom{
+.anime-move-left, .anime-move-right, .anime-move-top, .anime-move-bottom{
   opacity: 1;
   transform: translate3d(0,0,0);
 }
 
-.anim-open-vertical{
+.anime-open-vertical{
   opacity: 1;
   height: fit-content;
 }
 
-.anim-open-horizontal{
+.anime-open-horizontal{
   opacity: 1;
   width: initial;
 }
 
-.anim-fadein{
+.anime-fadein{
   opacity: 1;
 }
 

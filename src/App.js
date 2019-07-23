@@ -19,6 +19,8 @@ class App extends React.Component  {
   }
 
   componentDidMount(){
+
+    this.animeElements = document.querySelectorAll('[data-anime]')
     window.addEventListener('scroll',this.scrollSection) //trigger each time page rolls
 
     this.animeIntro(); //start intro animation
@@ -26,13 +28,19 @@ class App extends React.Component  {
 
   scrollSection = () => {
 
-    const windowTop = window.pageYOffset;  // get the window top position
+    const triggerTop = window.pageYOffset + ((window.innerHeight * 3) / 4);  // get the window top position
+    this.animeElements.forEach(el => {
+      
+      if(triggerTop > el.offsetTop){
+        el.classList.add('anime-' + el.attributes['data-anime'].value)
+      }
+    })
 
   }
 
   animeIntro = () => {
 
-    const animeTime = 0.2 * 1000; // time left to start animate next element
+    const animeTime = 0.2 * 1000; // time to start animate next element, must be the same as the transition css property of [data-anime]
     let animated = false;
     
     this.animeIntroPos++; // add to current element animation position count
@@ -41,7 +49,7 @@ class App extends React.Component  {
     
     animeElements.forEach(v=>{
       if(Number(v.attributes['data-intro'].value) === this.animeIntroPos){
-        v.classList.add('anim-' + v.attributes['data-anime'].value)
+        v.classList.add('anime-' + v.attributes['data-anime'].value)
         animated = true
       }
     })
