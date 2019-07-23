@@ -229,7 +229,7 @@ h2{
 $iconColor:white;
 $iconPadding:5px;
 $timeline-padding:10px;
-$block-height:250px;
+$block-height:300px;
 
 #timeline-section{  
   padding-top:30px;
@@ -280,14 +280,13 @@ $block-height:250px;
         justify-content: flex-end;
         align-items:center;
         padding:$timeline-padding;
+        color:$iconColor;
       
         .icon{
-          color:$iconColor;
           padding:$iconPadding;
         }
 
         .year{
-          color:$iconColor;
           padding-left:10px;
         }
 
@@ -321,14 +320,13 @@ $block-height:250px;
         justify-content: flex-end;
         align-items:center;
         padding:$timeline-padding;
+        color:$iconColor;
       
         .icon{
-          color:$iconColor;
           padding:$iconPadding;
         }
 
         .year{
-          color:$iconColor;
           padding-right:10px;
         }
 

@@ -14,7 +14,7 @@ class Intro extends React.Component {
                 <nav>
                     <li>Intro</li>
                     <li>Portfolio</li>
-                    <li>Timeline</li>
+                    <li>Curriculum</li>
                     <li>Contact</li>
                 </nav>
                 <header>
