@@ -134,7 +134,7 @@ export default {
             "icon":<FontAwesomeIcon icon={faUserTie} size="2x" className="icon" />,
             "year":"2007",
             "description1":"First Internet Venture",
-            "description2":"Quit last job to create an app for real estate business. Couldn't continue due to Lack of finacial resources and bills to pay.",
+            "description2":"Quit last job to create an app for real estate businesses. Couldn't continue due to Lack of finacial resources and bills to pay.",
             "spacing":"400px"
         },        
         {
@@ -158,7 +158,7 @@ export default {
             "icon":<FontAwesomeIcon icon={faCode} size="2x" className="icon" />,
             "year":"2007",
             "description1":"Web Dev - Securstar",
-            "description2":"Working with HTML, CSS, Javascript, PHP. Worked on the company website, internal management systems and CRM (SugarCRM). Got interested in information security, and started a graduation.",
+            "description2":"Working with HTML, CSS, Javascript, PHP. Worked on the company website, internal management systems and CRM (SugarCRM). Got interested in information security, and started a graduation degree.",
             "spacing":""
         },        
         {
