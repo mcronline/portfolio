@@ -7,17 +7,22 @@ class Intro extends React.Component {
 
     render(){
 
-        const resumeTags = this.props.data.map(line => <li data-anime="left">{line}</li>)
+        let animePos = 6;
+        const resumeTags = this.props.data.map(line => {
+                animePos++;
+                return(<li data-anime="move-left" data-intro={animePos}>{line}</li>)                
+            }
+        )
 
         return(
             <section id="intro-section">
                 <nav>
-                    <li>Intro</li>
-                    <li>Portfolio</li>
-                    <li>Curriculum</li>
-                    <li>Contact</li>
+                    <li data-anime="move-bottom" data-intro="1">Intro</li>
+                    <li data-anime="move-bottom" data-intro="2">Portfolio</li>
+                    <li data-anime="move-bottom" data-intro="3">Curriculum</li>
+                    <li data-anime="move-bottom" data-intro="4">Contact</li>
                 </nav>
-                <header>
+                <header data-anime="fadein" data-intro="5">
                     <div id="title">
                         <h1>Michel Curti Rozatti Soller</h1>
                         <div id="sub-title">
@@ -31,7 +36,7 @@ class Intro extends React.Component {
                     </div>
                 </header>
                 <div id="profile-info">
-                    <img src={photo} alt="Michel Curti Rozatti Soller"/>
+                    <img src={photo} alt="Michel Curti Rozatti Soller" data-anime="move-right" data-intro="6"/>
                     <div id="resume">
                         {resumeTags}
                     </div>

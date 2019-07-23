@@ -387,8 +387,6 @@ $block-height:300px;
     font-size:1.4em;
   }
 
-
-
   /*.portfolio-item-title{
     font-size: 1.4em;
   }
@@ -417,24 +415,53 @@ $block-height:300px;
 
 //ANINATION
 
-/*[data-anime]{
+[data-anime]{
   opacity:0;
+  transition: 0.2s;
 }
 
-[data-anime="left"]{
+[data-anime="move-left"]{
+  transform: translate3d(50px,0,0);
+}
+
+[data-anime="move-right"]{
   transform: translate3d(-50px,0,0);
 }
 
-[data-anime="top"]{
+[data-anime="move-top"]{
   transform: translate3d(0,50px,0);
 }
 
-[data-anime="normal"]{
+[data-anime="move-bottom"]{
+  transform: translate3d(0,-50px,0);
+}
+
+[data-anime="open-vertical"]{
+  height:0px;
+}
+
+[data-anime="open-horizontal"]{
+  width:0px;
+}
+
+.anim-move-left, .anim-move-right, .anim-move-top, .anim-move-bottom{
   opacity: 1;
   transform: translate3d(0,0,0);
-}*/
+}
 
+.anim-open-vertical{
+  opacity: 1;
+  height: fit-content;
+}
 
+.anim-open-horizontal{
+  opacity: 1;
+  width: initial;
+}
+
+.anim-fadein{
+  opacity: 1;
+}
 
 @keyframes brilho-tela{
   0%{
