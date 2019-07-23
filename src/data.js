@@ -17,8 +17,8 @@ export default {
         "Full stack web developer / Internet Entrepreneur",
         "Backend : Nodejs, PHP",
         "Frontend => Javascript, React, Jquery",
-        "UI { <HTML /> : SCSS : Bootstrap}",
-        "Wordpress Developer Expert"        
+        "UI { <HTML /> : SCSS : Bootstrap : Semantic UI }",
+        "Wordpress Developer Expert"
     ],
     
     "portfolio" : [
