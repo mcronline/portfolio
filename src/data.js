@@ -186,7 +186,7 @@ export default {
             "icon":<FontAwesomeIcon icon={faUserTie} size="2x" className="icon" />,
             "year":"2014 - Now",
             "description1":"Created 2 online business. Freelance worker",
-            "description2":"Created and maintaining a renewed real estate app (imoveis.expert) and an address search website (qualocep.com), and working as a freelance developer.",
+            "description2":"Created and maintain a revamped real estate app (imoveis.expert) and an address search website (qualocep.com), and working as a freelance developer.",
             "spacing":""
         }
 
