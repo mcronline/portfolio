@@ -11,6 +11,27 @@ const imgsList = (prefix,n) => {
 }
 
 export default {
+    
+    "menu" : [
+
+        {
+            'label':'Intro',
+            'link':''
+        },
+        {
+            'label':'Portfolio',
+            'link':''
+        },
+        {
+            'label':'Curriculum',
+            'link':''
+        },
+        {
+            'label':'Contact',
+            'link':''
+        }
+    ],
+
     "resume" : [
         "Computer Engineering and Information Security degree",
         "More than 25 years of programming experience",
@@ -18,7 +39,8 @@ export default {
         "Backend : Nodejs, PHP",
         "Frontend => Javascript, React, Jquery",
         "UI { <HTML /> : SCSS : Bootstrap : Semantic UI }",
-        "Wordpress Developer Expert"
+        "Wordpress Developer Expert",
+        "Languages: Portuguese (Native), English (fluent)"
     ],
     
     "portfolio" : [
