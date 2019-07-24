@@ -2,6 +2,7 @@ import React from 'react'
 import photo from '../images/michel.jpg'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faLinkedin,faTwitterSquare,faGithubSquare} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 
 class Intro extends React.Component {
 
@@ -31,6 +32,7 @@ class Intro extends React.Component {
                                 <FontAwesomeIcon icon={faLinkedin} size="2x" className="icons" />
                                 <FontAwesomeIcon icon={faTwitterSquare} size="2x" className="icons" />
                                 <FontAwesomeIcon icon={faGithubSquare} size="2x" className="icons" />
+                                <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" className="icons" />
                             </div>
                         </div>
                     </div>

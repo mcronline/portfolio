@@ -190,5 +190,11 @@ export default {
             "spacing":""
         }
 
+    ],
+    'contact':[
+        'Thank you for comming!',
+        'Do you need to CREATE, BUILD, FIX something?',
+        '(or just make a friend?)',
+        'You can find me here'        
     ]
 }

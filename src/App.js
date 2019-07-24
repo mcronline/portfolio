@@ -68,7 +68,7 @@ class App extends React.Component  {
           <Intro data={data.resume} />
           <Portfolio data={data.portfolio} />
           <Timeline data={data.timeline} />
-          <Contact />
+          <Contact data={data.contact} />
         </div>
       </div>
     );
