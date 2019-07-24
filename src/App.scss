@@ -22,6 +22,15 @@ body{
   line-height:24px;
 }
 
+a{
+  color:white;
+  cursor:pointer;
+}
+
+a:hover{
+  color:#fff284;
+}
+
 section{
   margin-bottom:20px;
 }
@@ -51,6 +60,7 @@ h2{
   display: flex;
   flex-direction:column;
   align-items: center;
+  overflow: hidden;
 }
 
 #bg{
@@ -61,10 +71,32 @@ h2{
   opacity: 0.3;
 }
 
-#bg-brilho-tela{
-  animation-name: brilho-tela;
-  animation-duration: 300ms;
-  animation-iteration-count: infinite;
+#hidden-nav{
+  position: fixed;
+  top:-50px;
+  left:0;
+  width:100vw;
+  height:50px;
+  max-height: 150px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index:1000;
+  transition: 0.3s;
+  transform: translate3d(0,50,0);
+  
+
+  ul{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    font-size:0.7em;
+    max-width: 800px;
+    margin:0;
+    list-style: none;
+  }
 }
 
 // INTRO
@@ -359,6 +391,7 @@ $block-height:300px;
 #contact-section{  
   display:flex;
   flex-direction:column;
+  justify-content: space-around;
   align-items:center;
   text-align:center;
   width: 100vw;
@@ -390,7 +423,6 @@ $block-height:300px;
 }
 
 .family-img{
-  width:80%;
   max-width: 500px;
   border:2px solid white;
   border-radius: 20px;
@@ -431,7 +463,7 @@ $block-height:300px;
     width: 250vw;
   }
 
-  #intro-section nav{
+  #intro-section nav, #hidden-nav{
     font-size:1.4em;
   }
 
@@ -458,6 +490,7 @@ $block-height:300px;
   #timeline, #timeline-top{
     font-size:1.4em;
   }
+
 
   /*.portfolio-item-title{
     font-size: 1.4em;
@@ -551,6 +584,16 @@ $block-height:300px;
 
 .anime-fadein{
   opacity: 1;
+}
+
+.show-menu{
+  top:0px !important;
+}
+
+#bg-brilho-tela{
+  animation-name: brilho-tela;
+  animation-duration: 300ms;
+  animation-iteration-count: infinite;
 }
 
 @keyframes brilho-tela{

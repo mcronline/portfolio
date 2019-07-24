@@ -36,6 +36,14 @@ class App extends React.Component  {
       }
     })
 
+    const menu = document.getElementById("hidden-nav");
+    
+    if(window.pageYOffset > 100){ 
+      menu.classList.add('show-menu');
+    }else{
+      menu.classList.remove('show-menu');
+    }
+
   }
 
   animeIntro = () => {
@@ -61,11 +69,15 @@ class App extends React.Component  {
 
 
   render(){
+
+    const hiddenNav = data.menu.map(menu => <a key={menu.label}>{menu.label}</a>);
+
     return (
       <div id="main">
         <Background />
+        <nav id="hidden-nav"><ul>{hiddenNav}</ul></nav>
         <div id="scroller">
-          <Intro data={data.resume} />
+          <Intro data={data.resume} menu={data.menu} />
           <Portfolio data={data.portfolio} />
           <Timeline data={data.timeline} />
           <Contact data={data.contact} />
