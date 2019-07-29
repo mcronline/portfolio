@@ -17,7 +17,7 @@ function Portfolio (props){
                         </div>
                     </div>
         
-        const imgs = v.imgs.map(value => <img className="portfolio-image" src={value} alt={v.title + " image"} />)
+        const imgs = v.imgs.map((value,i) => <img key={'img_'+i} className="portfolio-image" src={value} alt={v.title + " image"} />)
         
         return (
             <Modal key={v.key} trigger={item} closeIcon >

@@ -21,13 +21,13 @@ class App extends React.Component  {
   componentDidMount(){
 
     this.animeElements = document.querySelectorAll('[data-anime]')
-    window.addEventListener('scroll',this.scrollSection) //trigger each time page rolls
+    window.addEventListener('scroll',this.scrollAnime) //trigger each time page rolls
 
     this.animeIntro(); //start intro animation
   }
 
-  scrollSection = () => {
-
+  scrollAnime = () => {
+    
     const triggerTop = window.pageYOffset + ((window.innerHeight * 3) / 4);  // get the window top position
     this.animeElements.forEach(el => {
       
@@ -48,7 +48,7 @@ class App extends React.Component  {
 
   animeIntro = () => {
 
-    const animeTime = 0.2 * 1000; // time to start animate next element, must be the same as the transition css property of [data-anime]
+    const animeTime = 0.2 * 1000; // time period to start animating next element, must be the same as the transition css property of [data-anime]
     let animated = false;
     
     this.animeIntroPos++; // add to current element animation position count
@@ -66,18 +66,38 @@ class App extends React.Component  {
 
   }
 
+  scrollTo = (e) => {
+
+   
+    /*if(elYPosition !== viewYPosition){
+      setTimeout(
+        this.scrollTo(e),
+        1000 / scrollFps
+      )
+    }*/
+
+
+    /*const el = document.getElementById(`${e.target.attributes['data-ref'].value}`)
+    console.log(el)
+    el.focus()
+    el.scrollIntoView({
+        behavior:'smooth'
+    })*/
+
+  }
+
 
 
   render(){
 
-    const hiddenNav = data.menu.map(menu => <a key={menu.label}>{menu.label}</a>);
+    const hiddenNav = data.menu.map(menu => <a href={"#"+menu.link} key={menu.label}>{menu.label}</a>);
 
     return (
       <div id="main">
         <Background />
         <nav id="hidden-nav"><ul>{hiddenNav}</ul></nav>
         <div id="scroller">
-          <Intro data={data.resume} menu={data.menu} />
+          <Intro data={data.resume} menu={data.menu} scrollTo={this.scrollTo}/>
           <Portfolio data={data.portfolio} />
           <Timeline data={data.timeline} />
           <Contact data={data.contact} />

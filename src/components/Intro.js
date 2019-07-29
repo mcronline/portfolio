@@ -6,17 +6,25 @@ import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 
 function Intro (props){
 
-    let animePos = 6;
-    const resumeTags = props.data.map(line => {
+    let animePos = 0; // define animation position of the menu elements
+
+    const nav = props.menu.map(menu => {
+        animePos++;
+        return(
+            <a href={"#"+menu.link} key={menu.label} data-anime="move-bottom" data-intro={animePos}>{menu.label}</a>
+        )
+    })
+
+    animePos = 6; // define animation position of the resume elements
+
+    const resumeTags = props.data.map((line,i) => { // create resume elements
             animePos++;
-            return(<li data-anime="move-left" data-intro={animePos}>{line}</li>)                
+            return(<li key={i} data-anime="move-left" data-intro={animePos}>{line}</li>)                
         }
     )
 
-    const nav = props.menu.map(menu => <a key={menu.label}>{menu.label}</a>);
-
     return(
-        <section id="intro-section">
+        <section id="intro-section" data-ref="intro-section">
             <nav>
                 {nav}
             </nav>
