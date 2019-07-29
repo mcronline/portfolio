@@ -16,19 +16,19 @@ export default {
 
         {
             'label':'Intro',
-            'link':''
+            'link':'intro-section'
         },
         {
             'label':'Portfolio',
-            'link':''
+            'link':'portfolio-section'
         },
         {
             'label':'Curriculum',
-            'link':''
+            'link':'timeline-section'
         },
         {
             'label':'Contact',
-            'link':''
+            'link':'contact-section'
         }
     ],
 
@@ -216,7 +216,7 @@ export default {
     'contact':[
         'Thank you for comming!',
         'Do you need to CREATE, BUILD, FIX something?',
-        '(or just make a friend?)',
+        '(or just make a friend in tech?)',
         'You can find me here'        
     ]
 }
